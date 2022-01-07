@@ -1,0 +1,22 @@
+---
+---
+
+{% assign semesters = site.notes | where:"note_main",true | group_by:"note_semester" %}
+
+{% for semester in semesters %}
+    <section class="note-section card card-body bg-light">
+            <h1>Semester {{ semester.name }}</h1>
+
+            {% assign subject_types = semester.items | group_by:"note_subject_type" | reverse %}
+
+            {% for subject_type in subject_types %}
+                <h2>{{ subject_type.name }}</h2>
+
+                <ol>
+                    {% for notepage in subject_type.items %}
+                        <li><a href="{% link {{ notepage.path }} %}">{{ notepage.note_subject_name }}</a></li>
+                    {% endfor %}
+                </ol>
+            {% endfor %}
+    </section>
+{% endfor %}

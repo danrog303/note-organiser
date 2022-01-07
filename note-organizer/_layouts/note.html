@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="container" id="main-container">
+    <header class="note-section card card-body bg-light">
+        <h1>{{ page.note_subject_name }} ({{ page.note_subject_type | downcase }}, semestr  {{ page.note_semester }})</h1>
+
+        <nav>
+            <ul class="nav nav-tabs">
+                {% assign all_notes = site.notes | where_exp: "item", "item.note_subject_name == page.note_subject_name and item.note_subject_type == page.note_subject_type and item.note_semester == page.note_semester" %}
+
+                {% assign first_note = all_notes | where_exp: "item", "item.note_main == true" %}
+
+                {% assign other_notes = all_notes | where_exp: "item", "item.note_main != true" %}
+
+                {% assign notes = first_note | concat: other_notes %}
+        
+                {% for note in notes %}
+                    <li class="nav-item">
+                        <a class="nav-link{% if note.note_name == page.note_name %} active{% endif %}" href="{% link {{{{note.path}} %}">{{ note.note_name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    
+        <p style="margin-top: 20px;"><a href="{% link index.html %}">(&larr; return to homepage)</a></p>
+    </header>
+
+    {{ content }}
+</div>

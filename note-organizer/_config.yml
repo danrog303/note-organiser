@@ -1,0 +1,35 @@
+title: Your custom title
+email: example.user@example.com
+author: John Smith
+description: John Smith's notes.
+baseurl: "/"
+url: ""
+
+collections:
+  notes:
+    output: true
+    permalink: /notepage/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
+      title: "Notes"
+      note_subject_name: "Unknows subject"
+      note_subject_type: "Unknown type"
+      note_semester: "nieznany"
+      note_key: "Notes"
+
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      title: "Notes"
+      layout: "page"
+
+theme: minima
+plugins:
+  - jekyll-feed
+

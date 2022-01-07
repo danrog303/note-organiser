@@ -1,0 +1,50 @@
+---
+---
+
+<!DOCTYPE html>
+ <html>
+ <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% link /assets/css/libs/bootstrap.min.css %}" />
+    <link rel="stylesheet" href="{% link /assets/css/libs/ekko-lightbox.css %}" />
+    <link rel="stylesheet" href="{% link /assets/css/libs/highlight.min.css %}" />
+    <link rel="stylesheet" href="{% link /assets/css/style.css %}" />
+
+    <script src="{% link /assets/js/libs/jquery-3.6.0.min.js %}"></script>
+    <script src="{% link /assets/js/libs/bootstrap.min.js %}"></script>
+    <script src="{% link /assets/js/libs/ekko-lightbox.min.js %}"></script>
+    <script src="{% link /assets/js/libs/highlight.min.js %}"></script>
+
+    <!--MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="{% link /assets/js/libs/mathjax.min.js %}"></script>
+
+    <meta name="description" content="{{ page.description }}"/>
+    <title>
+        {% if page.note_name %}
+            {{ page.note_subject_name }} | {{ page.note_name }}
+        {% endif %}
+        {{ site.title }}
+    </title>
+ </head>
+ <body>
+    {{ content }}
+
+    <script>hljs.highlightAll();</script>
+    <script src="{% link /assets/js/normalize-indents.js %}"></script>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
+    <script>
+        MathJax = {
+            chtml: { displayAlign: 'left' }
+        };
+    </script>
+ </body>
+</html>

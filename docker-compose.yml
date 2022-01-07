@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  jekyll:
+    image: jekyll/jekyll:4.2.0
+    command: jekyll serve
+    ports:
+      - 4005:4000
+    volumes:
+      - "./note-organizer:/srv/jekyll"
+      - "./note-organizer-cache:/usr/local/bundle"
+    restart: always
