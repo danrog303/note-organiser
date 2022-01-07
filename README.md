@@ -20,7 +20,8 @@ Your notes should be written in HTML format. Put your notes inside **note-organi
 Every HTML file should contain [front matter](https://jekyllrb.com/docs/front-matter/) with those variables set:
 ```
 # Is this the main note of this subject?
-# If subject with this name, type and semester contains multiple notes, you should mark one of them as true and the rest as false
+# If subject with this name, type and semester 
+# contains multiple notes, you should mark one of them as true and the rest as false
 note_main: true  
 
 # Subject name
@@ -32,7 +33,8 @@ note_subject_type: "Lectures"
 # Semester, that is covered by this note 
 note_semester: 2  
 
-# Note name - if subject with this name, type and semester contains multiple notes, they all should have different names
+# Note name - if subject with this name, type and 
+# semester contains multiple notes, they all should have different names
 note_name: "My english notes"
 ```
 
@@ -41,6 +43,7 @@ If something is still unclear, inside **/note-organizer/_notes** you will find s
 ## Screenshots
 ### Screenshot 1:
 <img src="https://user-images.githubusercontent.com/32397526/148612565-8dc7ba87-d1ec-4644-94ea-c48a90983c0f.png" alt="screenshot 1" width="600">
+
 ### Screenshot 2:
 <img src="https://user-images.githubusercontent.com/32397526/148612571-3720392e-8904-432b-bb61-6e64ec24d9e0.png" alt="screenshot 2" width="600">
 
