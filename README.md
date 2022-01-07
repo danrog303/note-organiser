@@ -38,7 +38,7 @@ note_semester: 2
 note_name: "My english notes"
 ```
 
-If something is still unclear, inside **/note-organizer/_notes** you will find some default notes to help you understand how note-organizer works. Once you have read them, you should delete them to make room for your own notes.
+If something is still unclear, inside **note-organizer/_notes** you will find some default notes to help you understand how **note-organizer** works. Once you have read them, you should delete them to make room for your own notes.
 
 ## Screenshots
 ### Screenshot 1:
