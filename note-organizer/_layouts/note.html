@@ -5,6 +5,11 @@ layout: default
 <div class="container" id="main-container">
     <header class="note-section card card-body bg-light">
         <h1>{{ page.note_subject_name }} ({{ page.note_subject_type | downcase }}, semester  {{ page.note_semester }})</h1>
+        {% if page.note_lecturer %}
+            <p style="color: gray; margin-bottom: 8px;">
+                Lecturer: {{ page.note_lecturer }}
+            </p>
+        {% endif %}
 
         <nav>
             <ul class="nav nav-tabs">

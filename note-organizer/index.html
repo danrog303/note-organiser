@@ -14,7 +14,12 @@
 
                 <ol>
                     {% for notepage in subject_type.items %}
-                        <li><a href="{% link {{ notepage.path }} %}">{{ notepage.note_subject_name }}</a></li>
+                        <li>
+                            <a href="{% link {{ notepage.path }} %}">{{ notepage.note_subject_name }}</a>
+                            {% if notepage.note_lecturer %}
+                                (Lecturer: {{ notepage.note_lecturer }})
+                            {% endif %}
+                        </li>
                     {% endfor %}
                 </ol>
             {% endfor %}
