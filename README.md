@@ -36,6 +36,10 @@ note_semester: 2
 # Note name - if subject with this name, type and 
 # semester contains multiple notes, they all should have different names
 note_name: "My english notes"
+
+Optional name of lecurer, that
+will be displayed both on the home page and on the note page.
+note_lecturer: "John Smith"
 ```
 
 If something is still unclear, inside **note-organizer/_notes** you will find some default notes to help you understand how **note-organizer** works. Once you have read them, you should delete them to make room for your own notes.
